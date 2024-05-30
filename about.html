@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("images/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+        }
+        .bg-light {
+            background-color: #f8f9fa00!important;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: justify;
+            color: #777;
+            margin-top: 20px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Gym Website Logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <h1>About Power Gym</h1>
+    <p>Welcome to Power Gym, where fitness meets excellence. Our mission is to empower individuals to lead healthier lives through our top-notch fitness programs, expert trainers, and state-of-the-art facilities.</p>
+    <h2 id="mission">Our Mission</h2>
+    <p id="missionText">At Power Gym, our mission is to inspire and support every member to achieve their personal fitness goals through exceptional service, innovative fitness solutions, and a vibrant community.</p>
+    <h2 id="facilities">Our Facilities</h2>
+    <p id="facilitiesText">We offer a wide range of facilities including modern equipment, spacious workout areas, and specialized zones for different fitness activities.</p>
+    <h2 id="trainers">Expert Trainers</h2>
+    <p id="trainersText">Our certified trainers are here to guide and motivate you, providing personalized fitness plans and ongoing support.</p>
+    <h2 id="programs">Fitness Programs</h2>
+    <p id="programsText">From yoga to high-intensity interval training, we have a variety of programs to suit all fitness levels and preferences.</p>
+    <h2 id="community">Community</h2>
+    <p id="communityText">Join our community and be part of a supportive environment where members motivate each other to reach new heights.</p>
+    <h2 id="safety">Safety Measures</h2>
+    <p id="safetyText">Your safety is our priority. We maintain the highest standards of cleanliness and implement strict safety protocols.</p>
+    <h2 id="join">Join Us</h2>
+    <p id="joinText">Start your fitness journey with Power Gym. Contact us today to learn more about our memberships and programs.</p>
+    <p>At Power Gym, we believe in transforming lives through fitness. Experience the power of our state-of-the-art facilities, expert trainers, diverse fitness programs, and supportive environment. Unleash your potential and achieve your fitness goals at Power Gym. Get started today and embark on a journey of strength, health, and self-transformation.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    const elements = [
+        { id: "mission", delay: 0 },
+        { id: "missionText", delay: 100 },
+        { id: "facilities", delay: 200 },
+        { id: "facilitiesText", delay: 300 },
+        { id: "trainers", delay: 400 },
+        { id: "trainersText", delay: 500 },
+        { id: "programs", delay: 600 },
+        { id: "programsText", delay: 700 },
+        { id: "community", delay: 800 },
+        { id: "communityText", delay: 900 },
+        { id: "safety", delay: 1000 },
+        { id: "safetyText", delay: 1100 },
+        { id: "join", delay: 1200 },
+        { id: "joinText", delay: 1300 }
+    ];
+
+    elements.forEach(element => {
+        const el = document.getElementById(element.id);
+        if (el) {
+            el.style.opacity = 0;
+            el.style.transform = "translateX(-50px)";
+            el.style.transition = "opacity 500ms ease-out, transform 500ms ease-out";
+            setTimeout(() => {
+                el.style.opacity = 1;
+                el.style.transform = "translateX(0)";
+            }, element.delay);
+        }
+    });
+</script>
+</body>
+</html>
